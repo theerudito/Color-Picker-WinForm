@@ -89,14 +89,13 @@ namespace Color_Picker
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
-            // Liberar eventos y recursos antes de cerrar
             if (globalMouseEvents != null)
             {
                 globalMouseEvents.MouseMove -= HandleGlobalMouseMove;
                 globalMouseEvents.MouseClick -= HandleGlobalMouseClick;
                 globalMouseEvents.Dispose();
             }
-            base.OnFormClosing(e); // Continuar con el cierre
+            base.OnFormClosing(e);
         }
     }
 }
